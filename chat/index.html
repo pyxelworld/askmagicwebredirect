@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Mudança de Domínio - Magic IA</title>
+    
+    <!-- Meta tag para o redirecionamento automático -->
+    <meta http-equiv="refresh" content="10; url=https://web.magicia.com.br">
+    
+    <style>
+        /* Estilos para garantir que a página ocupe toda a tela */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Fundo branco */
+            font-family: Arial, sans-serif; /* Fonte Arial */
+            color: #333; /* Cor do texto para boa legibilidade */
+        }
+
+        /* Container principal para centralizar o conteúdo */
+        .container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;   /* Centraliza verticalmente */
+            height: 100%;
+            text-align: center;      /* Centraliza o texto dentro dos parágrafos */
+            padding: 20px;           /* Espaçamento para evitar que o texto cole nas bordas */
+        }
+
+        /* Estilos para o conteúdo de texto */
+        .content p {
+            margin: 15px 0; /* Espaçamento entre os parágrafos */
+            line-height: 1.6; /* Melhora a legibilidade */
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Estilo para o link, para que ele se destaque */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Estamos mudando de domínio</h1>
+            <p>O site do Magic IA agora fica em <a href="https://magicia.com.br">https://magicia.com.br</a>.</p>
+            <p>Você poderá continuar acessando o Magic por aqui até fevereiro de 2027.</p>
+            <p>É recomendado atualizar seus favoritos e o app PWA com o novo domínio.</p>
+            <p><strong>Você será redirecionado em <span id="countdown">10</span> segundos.</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Script opcional para criar uma contagem regressiva visual
+        let seconds = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const interval = setInterval(() => {
+            seconds--;
+            if (countdownElement) {
+                countdownElement.textContent = seconds;
+            }
+            if (seconds <= 0) {
+                clearInterval(interval);
+                // O redirecionamento principal é feito pela meta tag no <head>,
+                // mas podemos adicionar um fallback aqui por segurança.
+                window.location.href = 'https://web.magicia.com.br';
+            }
+        }, 1000); // Executa a cada 1000ms (1 segundo)
+    </script>
+
+</body>
+</html>
